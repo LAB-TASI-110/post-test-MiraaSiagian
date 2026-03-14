@@ -1,0 +1,173 @@
+[ROLE / PERSONA]
+Bertindaklah sebagai seorang dosen pemrograman C yang berpengalaman mengajar algoritma dan struktur program kepada mahasiswa tahun pertama. 
+Jelaskan solusi secara logis dan langkah demi langkah sebelum menampilkan kode.
+
+---
+
+[WHAT – TUJUAN PROGRAM]
+
+Buat program yang mensimulasikan sistem perhitungan ongkos kirim jasa ekspedisi bernama Del-Express.
+
+Program harus:
+1. Menghitung biaya pengiriman paket milik dua orang (Butet dan Ucok).
+2. Menentukan berat paket Ucok berdasarkan berat paket Butet.
+3. Menghitung total berat kiriman.
+4. Menghitung total ongkos kirim berdasarkan kota tujuan.
+5. Menentukan apakah promo berlaku berdasarkan aturan promo yang diberikan.
+
+Masalah utama yang harus diselesaikan adalah:
+menghitung total biaya pengiriman secara otomatis berdasarkan kode kota, berat paket Butet, dan aturan promo.
+
+---
+
+[DATA ONGKIR]
+
+Gunakan tabel tarif berikut:
+
+Kode Kota | Nama Kota | Ongkir/Kg | Keterangan
+MDN | Medan | 8000 | Dalam Pulau
+BLG | Balige | 5000 | Dalam Pulau
+JKT | Jakarta | 12000 | Luar Pulau
+SBY | Surabaya | 13000 | Luar Pulau
+
+---
+
+[ATURAN BERAT PAKET]
+
+- Berat paket Butet diinput oleh pengguna.
+- Berat paket Ucok = 3/2 × berat paket Butet.
+
+---
+
+[ATURAN PROMO]
+
+Promo berlaku sebagai berikut:
+
+1. Jika total berat pengiriman > 10 kg  
+   → diskon ongkir sebesar 10%
+
+2. Jika tujuan kota termasuk kategori "Luar Pulau"  
+   → mendapatkan asuransi gratis
+
+Jika kedua kondisi terpenuhi, tampilkan kedua promo tersebut.
+
+---
+
+[LOGIKA PROSES]
+
+Program harus melakukan langkah berikut secara berurutan:
+
+1. Membaca input kode kota tujuan.
+2. Membaca berat paket Butet.
+3. Menghitung berat paket Ucok = 3/2 × berat Butet.
+4. Menghitung total berat = berat Butet + berat Ucok.
+5. Menentukan tarif ongkir per kg berdasarkan kode kota.
+6. Menghitung total ongkir sebelum promo:
+   
+   total_ongkir = total_berat × ongkir_per_kg
+
+7. Mengecek promo:
+   - jika total_berat > 10 kg → diskon 10%
+   - jika kota bertipe luar pulau → asuransi gratis
+
+8. Menghitung total ongkir setelah diskon jika ada.
+
+9. Menampilkan struk pembayaran.
+
+---
+
+[INPUT FORMAT]
+
+Input berasal dari keyboard dengan format:
+
+kode_kota
+berat_butet
+
+Input dapat diulang hingga pengguna memasukkan kata:
+
+END
+
+Contoh input:
+
+MDN
+5
+JKT
+3
+BLG
+4
+END
+
+---
+
+[OUTPUT FORMAT]
+
+Program harus menampilkan struk pembayaran dengan format:
+
+===== STRUK DEL EXPRESS =====
+Kota Tujuan       : Medan
+Berat Paket Butet : 5 kg
+Berat Paket Ucok  : 7.5 kg
+Total Berat       : 12.5 kg
+Total Ongkir      : Rp100000
+Promo             : Diskon 10% + Asuransi Gratis
+=============================
+
+Jika tidak ada promo, tampilkan:
+
+Promo : Tidak ada promo
+
+---
+
+[TEKNIS IMPLEMENTASI]
+
+Bahasa Pemrograman : C  
+Standar Compiler   : GCC (C99)  
+Lingkungan         : Linux / Windows terminal  
+IDE yang disarankan: VSCode atau CodeBlocks
+
+Gunakan:
+- `if` untuk pengecekan kode kota
+- `while` loop untuk membaca input sampai "END"
+- `double` untuk perhitungan berat
+- `string` atau `char array` untuk kode kota
+
+---
+
+[STRUKTUR PROGRAM]
+
+Program harus terdiri dari:
+
+1 file utama saja:
+
+del_express.c
+
+Struktur kode:
+
+- fungsi `getTarif()` → menentukan tarif berdasarkan kode kota
+- fungsi `getKeterangan()` → menentukan dalam/luar pulau
+- fungsi `hitungPromo()` → menentukan promo
+- `main()` → membaca input dan mencetak struk
+
+---
+
+[BOUNDARIES / BATASAN]
+
+1. Jangan menggunakan library selain:
+   stdio.h  
+   string.h  
+
+2. Tidak perlu GUI atau database.
+
+3. Semua input dianggap valid (tidak perlu validasi kompleks).
+
+4. Gunakan format kode yang rapi dan komentar singkat pada setiap bagian penting.
+
+---
+
+[OUTPUT YANG DIMINTA]
+
+Berikan:
+
+1. Penjelasan algoritma secara singkat
+2. Kode program lengkap dalam bahasa C
+3. Contoh hasil output jika menggunakan input contoh

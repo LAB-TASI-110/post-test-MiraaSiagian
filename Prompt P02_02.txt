@@ -1,0 +1,130 @@
+[ROLE / PERSONA]
+
+Berperanlah sebagai seorang mahasiswa algoritma dan pemrograman bahasa C yang masih tingkat awal.  
+Analisis masalah terlebih dahulu, kemudian jelaskan langkah penyelesaian secara bertahap sebelum menuliskan kode program.
+
+---
+
+[WHAT – TUJUAN PROGRAM]
+
+Buat sebuah program untuk menghitung total stok barang berdasarkan kategori tertentu dari data stok yang tersimpan di gudang.
+
+Program harus dapat:
+1. Membaca jumlah total data stok barang.
+2. Membaca deret nilai stok barang.
+3. Membaca kode kategori barang yang ingin dihitung.
+4. Menghitung total stok hanya untuk kategori yang diminta.
+
+---
+
+[INTI PERMASALAHAN]
+
+Data stok barang disimpan dalam sebuah rak gudang dengan pola pengelompokan tertentu.
+
+Setiap barang dalam deret stok memiliki kategori berdasarkan posisinya dalam deret data.
+
+Kategori barang ditentukan sebagai berikut:
+
+Kategori 1 → elemen ke-1, ke-4, ke-7, ...  
+Kategori 2 → elemen ke-2, ke-5, ke-8, ...  
+Kategori 3 → elemen ke-3, ke-6, ke-9, ...
+
+Dengan kata lain, kategori ditentukan berdasarkan operasi:
+
+index % 3
+
+Tugas program adalah menghitung jumlah stok dari kategori yang dipilih oleh pengguna.
+
+---
+
+[ALUR LOGIKA PROGRAM]
+
+Program harus bekerja dengan urutan berikut:
+
+1. Membaca input jumlah total data (N).
+2. Membaca N buah data stok barang.
+3. Membaca kode kategori barang (1, 2, atau 3).
+4. Melakukan iterasi melalui seluruh data stok.
+5. Mengecek apakah posisi data sesuai dengan kategori yang diminta.
+6. Menjumlahkan stok dari kategori tersebut.
+7. Menampilkan total stok kategori yang diminta.
+
+---
+
+[WHERE – KONTEKS TEKNIS]
+
+Bahasa Pemrograman : C  
+Standar Bahasa     : C99  
+Compiler           : GCC  
+IDE yang disarankan: Visual Studio Code atau CodeBlocks  
+Platform Eksekusi  : Terminal pada sistem operasi Windows atau Linux.
+
+Library yang boleh digunakan:
+
+stdio.h
+
+---
+
+[HOW IT LOOKS – STRUKTUR PROGRAM]
+
+Program harus berada dalam satu file:
+
+stok_gudang.c
+
+Struktur program:
+
+1. fungsi hitungTotalKategori()  
+   → menghitung total stok berdasarkan kategori
+
+2. fungsi main()  
+   → membaca input dan menampilkan hasil.
+
+---
+
+[FORMAT INPUT]
+
+Input diberikan melalui keyboard dengan format:
+
+N
+s1 s2 s3 s4 ... sN
+kategori
+
+Contoh input:
+
+4
+22 85 5 120
+1
+
+---
+
+[FORMAT OUTPUT]
+
+Program harus menampilkan hasil sebagai berikut:
+
+Total stok kategori 1 = 142
+
+Penjelasan contoh:
+Kategori 1 mengambil elemen posisi ke-1 dan ke-4:
+
+22 + 120 = 142
+
+---
+
+[BOUNDARIES / BATASAN]
+
+1. Program hanya menggunakan library stdio.h
+2. Tidak menggunakan GUI
+3. Tidak menggunakan database
+4. Program berjalan di console
+5. Gunakan array untuk menyimpan data stok
+6. Gunakan loop untuk memproses data.
+
+---
+
+[OUTPUT YANG DIMINTA]
+
+Berikan:
+
+1. Penjelasan algoritma langkah demi langkah.
+2. Kode program lengkap dalam bahasa C.
+3. Contoh output berdasarkan contoh input.

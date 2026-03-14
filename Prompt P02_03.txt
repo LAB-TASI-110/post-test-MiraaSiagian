@@ -1,0 +1,155 @@
+[ROLE / PERSONA]
+
+Berperanlah sebagai seorang mahasiswa tingkat awal yang sedang belajar algoritma dan pemrograman bahasa C.
+Analisis permasalahan terlebih dahulu, kemudian jelaskan solusi secara logis dan bertahap sebelum menuliskan kode program.
+
+
+---
+
+[WHAT – TUJUAN SISTEM]
+
+Buat sebuah program sederhana yang mensimulasikan sistem operasional kafetaria IT Del.
+
+Program harus mampu membantu proses dasar transaksi di kafetaria, yaitu:
+1. Menampilkan daftar menu makanan dan minuman.
+2. Memungkinkan pengguna memilih menu yang ingin dibeli.
+3. Memasukkan jumlah pesanan.
+4. Menghitung total harga yang harus dibayar.
+5. Menampilkan rincian pesanan dan total pembayaran.
+
+
+---
+
+[INTI PERMASALAHAN]
+
+Kafetaria IT Del menjual beberapa jenis makanan dan minuman.
+
+Setiap menu memiliki:
+- nama makanan/minuman
+- harga
+
+Program harus menghitung total pembayaran berdasarkan:
+- menu yang dipilih
+- jumlah pesanan
+
+Masalah utama yang harus diselesaikan adalah bagaimana:
+1. Menyimpan data menu dan harga.
+2. Membaca pilihan menu dari pengguna.
+3. Menghitung total pembayaran secara otomatis.
+
+
+---
+
+[ALUR LOGIKA PROGRAM]
+
+Program harus berjalan dengan urutan proses berikut:
+
+1. Menampilkan daftar menu makanan/minuman yang tersedia.
+2. Pengguna memasukkan nomor menu yang ingin dibeli.
+3. Pengguna memasukkan jumlah pesanan.
+4. Program menghitung total harga:
+   
+   total = harga_menu × jumlah_pesanan
+
+5. Program menampilkan:
+   - nama menu
+   - jumlah pesanan
+   - total pembayaran.
+
+
+---
+
+[WHERE – KONTEKS TEKNIS]
+
+Bahasa Pemrograman : C  
+Standar Bahasa     : C99  
+Compiler           : GCC  
+IDE yang disarankan: Visual Studio Code atau CodeBlocks  
+Platform Eksekusi  : Terminal pada sistem operasi Windows atau Linux.
+
+Library yang boleh digunakan:
+
+stdio.h
+
+
+---
+
+[HOW IT LOOKS – STRUKTUR PROGRAM]
+
+Program harus berada dalam satu file:
+
+kafetaria_itdel.c
+
+Struktur program:
+
+1. fungsi tampilMenu()
+   → menampilkan daftar menu kafetaria
+
+2. fungsi hitungTotal()
+   → menghitung total harga pesanan
+
+3. fungsi main()
+   → membaca input pengguna dan menampilkan hasil transaksi
+
+
+---
+
+[FORMAT INPUT]
+
+Input diberikan melalui keyboard dengan format berikut:
+
+pilihan_menu
+jumlah_pesanan
+
+Contoh input:
+
+2
+3
+
+
+---
+
+[DATA MENU]
+
+Menu kafetaria:
+
+1  Nasi Goreng   15000
+2  Mie Goreng    12000
+3  Ayam Geprek   18000
+4  Teh Manis      5000
+5  Jus Alpukat   10000
+
+
+---
+
+[FORMAT OUTPUT]
+
+Program harus menampilkan hasil seperti berikut:
+
+Menu yang dipilih : Mie Goreng
+Jumlah pesanan    : 3
+Total pembayaran  : 36000
+
+
+---
+
+[BOUNDARIES / BATASAN]
+
+1. Program hanya menggunakan library stdio.h
+2. Tidak menggunakan GUI
+3. Tidak menggunakan database
+4. Program berjalan di console
+5. Gunakan array untuk menyimpan data menu dan harga
+6. Gunakan percabangan (if atau switch) untuk menentukan menu
+
+
+---
+
+[OUTPUT YANG DIMINTA]
+
+Berikan:
+
+1. Penjelasan algoritma langkah demi langkah.
+2. Struktur logika program.
+3. Kode program lengkap dalam bahasa C.
+4. Contoh input dan output program.
